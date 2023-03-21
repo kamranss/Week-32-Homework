@@ -49,9 +49,58 @@
                 </div>
               </nav>
            <section class="d-flex justify-content-between mt-5">
-            <form class="col-7" action="">
-              <input type="date">
-            </form>
+            <div class="col-7">
+
+              <form class="row row-cols-lg-auto g-3 align-items-center">
+                <div class="col-12">
+                  <label class="visually-hidden" for="inlineFormInputGroupUsername">Date</label>
+                  <div class="input-group">
+                    <div class="input-group-text">@</div>
+                    <input type="date" class="form-control dateInput" id="inlineFormInputGroupUsername" placeholder="Username">
+                  </div>
+                </div>
+              
+                <div class="col-12">
+                  <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                  <select class="form-select" id="inlineFormSelectPref">
+                    <option selected>Choose City</option>
+                    <option value="1">Sidney</option>
+                    <option value="2">London</option>
+                    <option value="3">Istanbul</option>
+                    <option value="3">Moskow</option>
+                    <option value="3">Madrid</option>
+                  </select>
+                </div>
+              
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary button">Submit</button>
+                </div>
+              </form>
+              <!-- <form class="col-12" action="">
+                <input id="dateInput" type="date">
+                <input id="button" type="submit">
+              </form> -->
+              <table class="table col-12 mt-5">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">timezone</th>
+                    <th scope="col">midnightMode</th>
+                    <th scope="col">latitude</th>
+                    <th scope="col">longitude</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div class="col-4 cities">
               <h2 class="cities-heading"> <i class="fa-solid fa-map"></i> Top cities in the world <i class="fa-solid fa-location-arrow"></i></h2>
               <ul class="cities-list">
@@ -63,6 +112,8 @@
               </ul>
             </div>
            </section>
+
+           
             
         </div>
     </div>
