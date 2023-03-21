@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cities {
+  height: 400px;
+  border-radius: 5px;
+  border: 2px solid grey;
+}
+.cities .cities-heading {
+  background-color: rgb(10, 147, 147);
+  border-radius: 5px;
+  color: white;
+  height: 50px;
+}
+.cities .fa-solid {
+  font-size: 25px;
+}
+.cities .cities-list {
+  list-style: none;
+}/*# sourceMappingURL=miniappstyle.css.map */
