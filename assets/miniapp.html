@@ -59,18 +59,26 @@
                     <input type="date" class="form-control dateInput" id="inlineFormInputGroupUsername" placeholder="Username">
                   </div>
                 </div>
-              
+
                 <div class="col-12">
                   <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-                  <select class="form-select" id="inlineFormSelectPref">
+                  <select class="form-select countriesSelection" id="inlineFormSelectPref">
+                    <option selected>Choose Country</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                  <select class="form-select citiesSelection" id="inlineFormSelectPref">
                     <option selected>Choose City</option>
-                    <option value="Sidney">Sidney</option>
+                    <!-- <option value="Sidney">Sidney</option>
                     <option value="2">London</option>
                     <option value="3">Istanbul</option>
                     <option value="3">Moskow</option>
-                    <option value="3">Madrid</option>
+                    <option value="3">Madrid</option> -->
                   </select>
                 </div>
+                
               
                 <div class="col-12">
                   <button type="submit" class="btn btn-primary button">Submit</button>
@@ -84,10 +92,17 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">timezone</th>
-                    <th scope="col">midnightMode</th>
-                    <th scope="col">latitude</th>
-                    <th scope="col">longitude</th>
+                    <th scope="col">Fajr</th>
+                    <th scope="col">Sunrise</th>
+                    <th scope="col">Dhuhr</th>
+                    <th scope="col">Asr</th>
+                    <th scope="col">Sunset</th>
+                    <th scope="col">AMaghribsr</th>
+                    <th scope="col">Isha</th>
+                    <th scope="col">Imsak</th>
+                    <th scope="col">Midnight</th>
+                    <th scope="col">Firstthird</th>
+                    <th scope="col">Lastthird</th>
                   </tr>
                 </thead>
                 <!-- <tbody>
