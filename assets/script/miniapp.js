@@ -95,10 +95,17 @@ $(document).ready(function(){
                   <tbody>
                       <tr>
                         <th scope="row">${element.date.gregorian.day}</th>
-                        <td>${element.meta.timezone}</td>
-                        <td>${element.meta.midnightMode}</td>
-                        <td>${element.meta.latitude}</td>
-                        <td>${element.meta.longitude}</td>
+                        <td>${element.timings.Asr}</td>
+                        <td>${element.timings.Dhuhr}</td>
+                        <td>${element.timings.Fajr}</td>
+                        <td>${element.timings.Firstthird}</td>
+                        <td>${element.timings.Imsak}</td>
+                        <td>${element.timings.Isha}</td>
+                        <td>${element.timings.Lastthird}</td>
+                        <td>${element.timings.Maghrib}</td>
+                        <td>${element.timings.Midnight}</td>
+                        <td>${element.timings.Sunrise}</td>
+                        <td>${element.timings.Sunset}</td>
                       </tr>
                     </tbody>`
     
