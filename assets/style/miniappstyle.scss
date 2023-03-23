@@ -7,15 +7,24 @@
 .cities{
     height: 400px;
     border-radius: 5px;
-    border: 2px solid grey;
+    border: 1px solid grey;
+    background-color: rgb(19, 175, 175);
+    .cities-list{
+        color: white;
+        list-style: none;
+    }
     .cities-heading{
         background-color: rgb(10, 147, 147);
         border-radius: 5px;
         color: white;
         height: 50px;
+        font-size: 15px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
     .fa-solid{
-        font-size: 25px;
+        font-size: 15px;
     }
     .cities-list{
         list-style: none;
