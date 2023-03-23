@@ -25,7 +25,8 @@ $(document).ready(function(){
                 
               })
               console.log(filteredCounrty); // checking filtered countries
-
+              
+                  
                   filteredCounrty.forEach(item=>{
                     // console.log(item.states);
                     citiesSelection.html(''); // deleting previous options from cities list
@@ -34,7 +35,9 @@ $(document).ready(function(){
                   item.states.forEach(item=>{
                     // console.log(item.name);
                     const option = document.createElement("option");
-                    option.textContent = item.name;
+                    citiesArr = item.name.split(" ");
+                    // option.textContent = item.name;
+                    option.textContent = citiesArr[0];
                     citiesSelection.append(option)
                     
                 })
@@ -73,8 +76,8 @@ $(document).ready(function(){
           success: function(data){
             console.log(data);
             // console.log(data[0].country);
-            // console.log(data[0].longitude);
-            // console.log(data[0].latitude);
+            console.log(data[0].longitude);
+            console.log(data[0].latitude);
             
             let cityLongitude = data[0].longitude
             let cityLatitude = data[0].latitude
@@ -83,32 +86,30 @@ $(document).ready(function(){
               url: `http://api.aladhan.com/v1/calendar/${year}/${month}?latitude=${cityLatitude}&longitude=${cityLongitude}&method=2`,
               method: "get",
               success: function(data){
-                  let tBody = $("#tbody")
-                  if (!tBody == undefined) {
-                    tBody.html('');
-                  }
+
+                  // checking whether the Table body have some content and if have deleting old one
+                  let tBody = $("#tableTBody")
+                  tBody.html() !== "" ? $("#tableTBody").html('') : null;
+
                   data.data.forEach(element => {
-                  console.log(element);
-                    
+                 
                   let content = `
-                  <tbody id = "tbody>
-                      <tr>
-                        <th scope="row">${element.date.gregorian.day}</th>
-                        <td>${element.timings.Asr}</td>
-                        <td>${element.timings.Dhuhr}</td>
-                        <td>${element.timings.Fajr}</td>
-                        <td>${element.timings.Firstthird}</td>
-                        <td>${element.timings.Imsak}</td>
-                        <td>${element.timings.Isha}</td>
-                        <td>${element.timings.Lastthird}</td>
-                        <td>${element.timings.Maghrib}</td>
-                        <td>${element.timings.Midnight}</td>
-                        <td>${element.timings.Sunrise}</td>
-                        <td>${element.timings.Sunset}</td>
-                      </tr>
-                    </tbody>`
-    
-                    $(".table").append(content);
+                  <tr>
+                  <td>${element.date.gregorian.day}</td>
+                  <td>${element.timings.Asr}</td>
+                  <td>${element.timings.Dhuhr}</td>
+                  <td>${element.timings.Fajr}</td>
+                  <td>${element.timings.Firstthird}</td>
+                  <td>${element.timings.Imsak}</td>
+                  <td>${element.timings.Isha}</td>
+                  <td>${element.timings.Lastthird}</td>
+                  <td>${element.timings.Maghrib}</td>
+                  <td>${element.timings.Midnight}</td>
+                  <td>${element.timings.Sunrise}</td>
+                  <td>${element.timings.Sunset}</td>
+                </tr>`
+                      // <th scope="row">${element.date.gregorian.day}</th>
+                    $("#tableTBody").append(content);
                 });
       
               },
@@ -130,3 +131,9 @@ $(document).ready(function(){
   })
  
 })
+
+
+
+
+
+
