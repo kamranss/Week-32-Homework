@@ -1,5 +1,11 @@
 $(document).ready(function(){
-      // "https://countriesnow.space/api/v0.1/countries/capital"
+
+  // the basic concept of this service
+  // First stage o get countries list from respective Api
+  // Second stageaccording to user choise send this country to respective Api and get the list of Cities which related to this country
+  // Third Stage according to user choice send city to respective Api and get Location params such as longitude and latitude
+  // Forth stage considering date and city location sending this data to respective Api to get desired timings for Muslims
+      
 
       // taking country names for drop-down menu 
       let countriesSelection = $(".countriesSelection");
@@ -55,7 +61,7 @@ $(document).ready(function(){
 
 
 
-
+    // when button will be clicked the data will be loaded according to provided params " date, country and city"
   $(".button").click(function(e){
 
     e.preventDefault();
@@ -137,3 +143,4 @@ $(document).ready(function(){
 
 
 
+  // "https://countriesnow.space/api/v0.1/countries/capital"
