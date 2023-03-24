@@ -65,15 +65,14 @@
               <label class="visually-hidden" for="inlineFormInputGroupUsername">Date</label>
               <div class="input-group">
                 <div class="input-group-text">@</div>
-                <input type="date" class="form-control dateInput" id="inlineFormInputGroupUsername"
-                  placeholder="Username">
-                  <!-- <input type="number" id="typeNumber" class="form-control"  min="1" max="12" placeholder="Month" />
+                <!-- <input type="date" class="form-control dateInput" id="inlineFormInputGroupUsername"
+                  placeholder="Username"> -->
+                  <input type="number" id="typeNumber" class="form-control month"  min="1" max="12" placeholder="Month" />
                   <label class="form-label" for="typeNumber"></label>
-                  <input type="number" id="typeNumber" class="form-control" min="1" max="31" placeholder="Day" />
+                  <input type="number" id="typeNumber" class="form-control day" min="1" max="31" placeholder="Day" />
                   <label class="form-label" for="typeNumber"></label>
-                  <input type="number" id="typeNumber" class="form-control" min="2000" max="2023" placeholder="Year" />
-                  <label class="form-label" for="typeNumber"></label> -->
-
+                  <input type="number" id="typeNumber" class="form-control year" min="2000" max="2023" placeholder="Year" />
+                  <label class="form-label" for="typeNumber"></label>
                 
               </div>
             </div>
@@ -97,8 +96,8 @@
             <div class="col-12">
               <button type="submit" class="btn btn-primary button">Submit</button>
             </div>
-          </form>
-
+          </form><br>
+          <h6 style="color: red;">IF you will now choice any date it will display information related to <strong>01/01/2019</strong> </h6>
           <table class="table table-dark table-striped col-4  mt-5">
             <thead class="col-7">
               <tr class="col-12">
