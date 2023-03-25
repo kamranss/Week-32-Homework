@@ -72,7 +72,7 @@ $(document).ready(function(){
 
     dayInput == ""?  day = "1":day = dayInput;
     monthInput == ""? month = "1":month = monthInput;
-    yearInput == ""? year = "2019":year = yearInput;
+    yearInput == ""? year = "2023":year = yearInput;
     cityInput = "" || cityInput == "Choose City" ? city = "Baku": city = cityInput;
     console.log(city);
         let keyTimeZone = "+eTWYvpbfBgFGn4RbZbEpQ==6zUS8yIwq093kBch"
