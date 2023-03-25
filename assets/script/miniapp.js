@@ -1,10 +1,10 @@
 $(document).ready(function(){
 
   // the basic concept of this service
-  // First stage o get countries list from respective Api
-  // Second stageaccording to user choise send this country to respective Api and get the list of Cities which related to this country
+  // First stage to get countries list from respective Api
+  // Second stage according to user choise send this country to respective Api and get the list of Cities which related to this country
   // Third Stage according to user choice send city to respective Api and get Location params such as longitude and latitude
-  // Forth stage considering date and city location sending this data to respective Api to get desired timings for Muslims
+  // Forth stage considering day month year and city location sending this data to respective Api to get desired timings for Muslims
       
 
       // taking country names for drop-down menu 
@@ -73,8 +73,8 @@ $(document).ready(function(){
     dayInput == ""?  day = "1":day = dayInput;
     monthInput == ""? month = "1":month = monthInput;
     yearInput == ""? year = "2019":year = yearInput;
-    cityInput = "Choose City"? city = "Baku": city = cityInput;
-  
+    cityInput = "" || cityInput == "Choose City" ? city = "Baku": city = cityInput;
+    console.log(city);
         let keyTimeZone = "+eTWYvpbfBgFGn4RbZbEpQ==6zUS8yIwq093kBch"
         $.ajax({
           url:`https://api.api-ninjas.com/v1/city?name=${city}`,
@@ -82,8 +82,8 @@ $(document).ready(function(){
           success: function(data){
             console.log(data);
             // console.log(data[0].country);
-            console.log(data[0].longitude);
-            console.log(data[0].latitude);
+            // console.log(data[0].longitude);
+            // console.log(data[0].latitude);
             
             let cityLongitude = data[0].longitude
             let cityLatitude = data[0].latitude
@@ -146,14 +146,12 @@ $(document).ready(function(){
       
               },
               error: function(data){
-                  console.log(data);
+                Swal.fire('Unable to retrieve prayer times for the selected city.')
               }
           })
-
-
           },
           error: function(data){
-            console.log(data);
+            Swal.fire('Unable to retrieve prayer times for the selected city.')
           }
         })
 
